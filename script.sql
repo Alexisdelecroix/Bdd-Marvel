@@ -93,6 +93,15 @@ CREATE TABLE
         )
     ) ENGINE = InnoDB;
 
+    INSERT INTO Film_Prefere (Utilisateurs_id_Utilisateurs, Film_id_Film)
+VALUES
+    (3, 4),
+    (4, 4),
+    (5, 2),
+    (6, 5),
+    (8, 3),
+    (7, 2);
+
 DROP TABLE IF EXISTS Film_acteur ;
 
 CREATE TABLE
@@ -109,7 +118,7 @@ CREATE TABLE
     INSERT INTO Film_acteur (Film_id_Film, Acteur_id_Acteur, RoleActeur)
 VALUES
     (1, 1, 'Star-Lord'),
-    (1, 2, 'Ant-Man'),
+    (2, 2, 'Ant-Man'),
     (3, 3, 'Iron Man'),
     (4, 4, 'Spider-Man'),
     (5, 5, 'Black Widow');
@@ -125,6 +134,15 @@ CREATE TABLE
             Realisateurs_id_Realisateurs
         )
     ) ENGINE = InnoDB;
+
+
+    INSERT INTO Film_Realisateur (Film_id_Film , Realisateurs_id_Realisateurs )
+VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5);
 
 ALTER TABLE Film_Prefere
 ADD
