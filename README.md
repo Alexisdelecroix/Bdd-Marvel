@@ -8,8 +8,8 @@ Stocker et manipuler des données dans une base de données.
 
 ### Ajouter un film
 ``SQL
-INSERT INTO Film (Titre_Film, Duree_Film, Annee_Film ) <br>
-VALUES <br>
+INSERT INTO Film (Titre_Film, Duree_Film, Annee_Film )
+VALUES
 	('The Punisher', '02:20:00', '2004-04-16');``
 
 
