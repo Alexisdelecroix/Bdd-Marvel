@@ -6,13 +6,12 @@ Stocker et manipuler des données dans une base de données.
 
 ## Jeu de rêquete SQL ! 
 
-### ajouter un film
-
+### Ajouter un film
 ``SQL
-INSERT INTO Film (Titre_Film, Duree_Film, Annee_Film )
-VALUES
+INSERT INTO Film (Titre_Film, Duree_Film, Annee_Film ) <br>
+VALUES <br>
 	('The Punisher', '02:20:00', '2004-04-16');``
 
-    
+
 
 
