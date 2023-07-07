@@ -17,25 +17,23 @@ Stocker et manipuler des données dans une base de données.
     afficher les 3 derniers acteurs/actrices ajouté(e)s ​
 
 
-### Ajouter un film
-```SQL
-INSERT INTO Film (Titre_Film, Duree_Film, Annee_Film )
-VALUES
-	('The Punisher', '02:20:00', '2004-04-16');
-    ```;
+## Ajouter un film
+
+```sql
+INSERT INTO Film (Titre_Film, Duree_Film, Annee_Film)
+VALUES ('The Punisher', '02:20:00', '2004-04-16');
+```
+
+## Ajouter une actrice ou un acteur
+
+```sql
+INSERT INTO Acteur (Nom_Acteur, Prenom_Acteur, dateDeNaissance_Acteur)
+VALUES ('Potts', 'Pepper', '1974-02-12');
+```
 
 
-### Ajouter une actrice ou un acteur
-
-```SQL
- INSERT INTO Acteur (Nom_Acteur, Prenom_Acteur, dateDeNaissance_Acteur )
-VALUES
-	('Potts', 'Pepper', '1974-02-12');
-    ```;
 
 
-
-### Ajouter une actrice ou un acteur
 
 
 
