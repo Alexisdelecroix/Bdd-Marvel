@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le : ven. 07 juil. 2023 à 09:57
+-- Généré le : ven. 07 juil. 2023 à 12:47
 -- Version du serveur : 8.0.29
 -- Version de PHP : 8.0.27
 
@@ -87,7 +87,7 @@ CREATE TABLE `Film_acteur` (
 
 INSERT INTO `Film_acteur` (`Film_id_Film`, `Acteur_id_Acteur`, `RoleActeur`) VALUES
 (1, 1, 'Star-Lord'),
-(1, 2, 'Ant-Man'),
+(2, 2, 'Ant-Man'),
 (3, 3, 'Iron Man'),
 (4, 4, 'Spider-Man'),
 (5, 5, 'Black Widow');
@@ -103,6 +103,18 @@ CREATE TABLE `Film_Prefere` (
   `Film_id_Film` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Déchargement des données de la table `Film_Prefere`
+--
+
+INSERT INTO `Film_Prefere` (`Utilisateurs_id_Utilisateurs`, `Film_id_Film`) VALUES
+(5, 2),
+(7, 2),
+(8, 3),
+(3, 4),
+(4, 4),
+(6, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -113,6 +125,17 @@ CREATE TABLE `Film_Realisateur` (
   `Film_id_Film` int NOT NULL,
   `Realisateurs_id_Realisateurs` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `Film_Realisateur`
+--
+
+INSERT INTO `Film_Realisateur` (`Film_id_Film`, `Realisateurs_id_Realisateurs`) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5);
 
 -- --------------------------------------------------------
 
@@ -239,13 +262,13 @@ ALTER TABLE `Film_acteur`
 -- AUTO_INCREMENT pour la table `Film_Prefere`
 --
 ALTER TABLE `Film_Prefere`
-  MODIFY `Utilisateurs_id_Utilisateurs` int NOT NULL AUTO_INCREMENT;
+  MODIFY `Utilisateurs_id_Utilisateurs` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `Film_Realisateur`
 --
 ALTER TABLE `Film_Realisateur`
-  MODIFY `Film_id_Film` int NOT NULL AUTO_INCREMENT;
+  MODIFY `Film_id_Film` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `Realisateurs`
