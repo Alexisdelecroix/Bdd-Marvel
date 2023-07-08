@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le : ven. 07 juil. 2023 à 12:47
+-- Généré le : sam. 08 juil. 2023 à 15:15
 -- Version du serveur : 8.0.29
 -- Version de PHP : 8.0.27
 
@@ -42,7 +42,6 @@ INSERT INTO `Acteur` (`Acteur_id_Acteur`, `Nom_Acteur`, `Prenom_Acteur`, `dateDe
 (1, 'Pratt', 'Chris', '1979-06-21'),
 (2, 'Rudd', 'Paul', '1969-04-06'),
 (3, 'Downey', 'Robert', '1965-04-04'),
-(4, 'Maguire', 'Tobey', '1975-06-27'),
 (5, 'Johansson', 'Scarlett', '1984-11-22');
 
 -- --------------------------------------------------------
@@ -67,7 +66,8 @@ INSERT INTO `Film` (`Film_id_Film`, `Titre_Film`, `Duree_Film`, `Annee_Film`) VA
 (2, 'Ant-Man', '02:05:00', '2015-07-14'),
 (3, 'Iron-Man', '02:06:00', '2008-04-30'),
 (4, 'Spider-Man', '02:01:00', '2002-06-12'),
-(5, 'Avengers', '02:23:00', '2012-04-25');
+(5, 'Marvel\'s The Avengers', '02:25:01', '2012-04-26'),
+(6, 'Les Gardiens de la Galaxie Vol. 2', '02:17:00', '2017-05-05');
 
 -- --------------------------------------------------------
 
@@ -89,8 +89,8 @@ INSERT INTO `Film_acteur` (`Film_id_Film`, `Acteur_id_Acteur`, `RoleActeur`) VAL
 (1, 1, 'Star-Lord'),
 (2, 2, 'Ant-Man'),
 (3, 3, 'Iron Man'),
-(4, 4, 'Spider-Man'),
-(5, 5, 'Black Widow');
+(5, 5, 'Black Widow'),
+(6, 1, 'Star-Lord');
 
 -- --------------------------------------------------------
 
@@ -183,7 +183,7 @@ INSERT INTO `Utilisateurs` (`Utilisateurs_id_Utilisateurs`, `Nom_Utilisateurs`, 
 (3, 'Delecroix', 'Alexis', 'd-alexis@hotmail.fr', 'DelecroixAlexis', 'Admin'),
 (4, 'Vansteenkiste', 'Sylvain', 'sylvain.vansteenkiste59@gmail.com', 'VansteenkisteSylvain', 'Admin'),
 (5, 'Brasseur', 'Julian', 'julianbrasseur2@gmail.com', 'BrasseurJulian', 'User'),
-(6, 'De Wulf', 'Théo', 'W-Theo@hotmail.fr', 'WulfTheo', 'User'),
+(6, 'De Wulf', 'Théo', 'W-Theo@hotmail.fr', 'WulfTheo', 'Admin'),
 (7, 'François', 'Jean-Pierre', 'JeanPierre@hotmail.fr', 'FrançoisJean', 'User'),
 (8, 'Serin', 'Charles', 'S-Charles@hotmail.fr', 'SerinCharles', 'User');
 
@@ -250,13 +250,13 @@ ALTER TABLE `Acteur`
 -- AUTO_INCREMENT pour la table `Film`
 --
 ALTER TABLE `Film`
-  MODIFY `Film_id_Film` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Film_id_Film` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `Film_acteur`
 --
 ALTER TABLE `Film_acteur`
-  MODIFY `Film_id_Film` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Film_id_Film` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `Film_Prefere`
