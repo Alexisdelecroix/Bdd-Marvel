@@ -17,7 +17,7 @@ SELECT Titre_Film, Annee_Film from Film ORDER BY Annee_Film ASC;
 ```sql
 SELECT Nom_Acteur, Prenom_Acteur, 
 ROUND(DATEDIFF(NOW(), dateDeNaissance_Acteur) / 365) AS Age FROM Acteur
-WHERE ROUND(DATEDIFF(NOW(), dateDeNaissance_Acteur) / 365) > 30;
+WHERE ROUND(DATEDIFF(NOW(), dateDeNaissance_Acteur) / 365) > 30 order by Nom_Acteur ASC;
 ```
 
 ### La liste des actrices ou acteurs principaux pour un film donné
@@ -81,17 +81,12 @@ SELECT Nom_Acteur, Prenom_Acteur, dateDeNaissance_Acteur FROM Acteur
 ORDER BY Acteur_id_Acteur DESC LIMIT 3; 
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### les noms, prénoms et âges des acteurs ou actrices de plus de 30 ans dans l'ordre alphabétique
+### La liste des actrices ou acteurs principaux pour un film donné
+### La liste des films pour une actrice ou un acteur donné
+### Ajouter un film
+### Ajouter une actrice ou un acteur
+### Modifier un film
+### Supprimer une actrice ou un acteur
+### Supprimer une actrice ou un acteur
+### Afficher les 3 derniers acteurs/actrices ajouté(e)s ​
