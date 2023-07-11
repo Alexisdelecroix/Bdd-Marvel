@@ -80,3 +80,5 @@ DELETE FROM Acteur where Acteur_id_Acteur = 4;
 SELECT Nom_Acteur, Prenom_Acteur, dateDeNaissance_Acteur FROM Acteur
 ORDER BY Acteur_id_Acteur DESC LIMIT 3; 
 ```
+
+👌
